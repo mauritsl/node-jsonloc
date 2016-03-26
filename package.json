@@ -1,0 +1,43 @@
+{
+  "name": "jsonloc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "jsonloc.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mauritsl/node-jsonloc.git"
+  },
+  "scripts": {
+    "test": "multi='spec=- mocha-lcov-reporter=lcov.txt' mocha -b --require ./test/assets/blanket.js -t 5s -R mocha-multi && jshint jsonloc.js",
+    "coverage": "mocha --no-timeouts --require ./test/assets/blanket.js -R html-cov > coverage.html",
+    "syntax": "jshint jsonloc.js"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "config": {
+    "blanket": {
+      "pattern": ["jsonloc.js", "classes"],
+      "data-cover-never": [
+        "node_modules",
+        "test"
+      ]
+    }
+  },
+  "keywords": [
+    "json",
+    "location",
+    "path",
+    "manipulation"
+  ],
+  "author": "Maurits Lawende",
+  "devDependencies": {
+    "chai": "~2.1.1",
+    "mocha": "~2.2.1",
+    "jshint": "~2.6.3",
+    "blanket": "~1.1.6",
+    "mocha-lcov-reporter": "0.0.2",
+    "mocha-multi": "~0.6.0"
+  },
+  "license": "MIT"
+}
