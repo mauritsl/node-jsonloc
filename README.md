@@ -2,6 +2,7 @@ JSONLoc
 ==================
 
 [![Build Status](https://travis-ci.org/mauritsl/node-jsonloc.svg?branch=master)](https://travis-ci.org/mauritsl/node-jsonloc)
+![Coverage](http://img.shields.io/badge/coverage-100%25-brightgreen.svg?style=flat)
 [![Dependency Status](https://david-dm.org/mauritsl/node-jsonloc.svg)](https://david-dm.org/mauritsl/node-jsonloc)
 
 Manipulate JSON/JavaScript objects using simple location queries.

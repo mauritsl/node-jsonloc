@@ -4,4 +4,3 @@ node_js:
   - "0.12"
   - "4.2"
   - "5.1"
-after_script: "npm install coveralls@2.10.0 && cat ./lcov.txt | coveralls"
