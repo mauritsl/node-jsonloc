@@ -24,7 +24,7 @@ var extractParts = function(location) {
   return parts.map(function(part) {
     return part[0] === '[' ? {
       type: 'array',
-      value: part === '[last]' ? -2 : (part === '[]' ? -1 : parseInt(part.replace(/^.(.*).$/, '$1')))
+      value: part === '[last]' ? -2 : (part === '[]' ? -1 : parseInt(part.replace(/^.(.*).$/, '$1'), 10))
     } : {
       type: 'property',
       value: part
@@ -76,7 +76,7 @@ var execute = function(object, location, action, value) {
     }
     
     // If this is the last part, execute the action.
-    if (i == parts.length - 1) {
+    if (i === parts.length - 1) {
       switch (action) {
         case 'get':
           return typeof ref[part.value] === 'undefined' ? null : ref[part.value];
